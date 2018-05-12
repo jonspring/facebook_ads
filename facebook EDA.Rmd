@@ -1,6 +1,6 @@
 ---
 title: "Exploratory Data Analysis of facebook ads"
-output: html_notebook
+output: github_document
 ---
 
 ```{r message=FALSE, warning=FALSE}
@@ -27,10 +27,10 @@ ggplot(FacebookAds_quant, aes(value)) +
 Spend vs. Clicks vs. Impressons
 
 ```{r}
-FacebookAds_quant %>% 
-  spread(stat, value) %>%
-  mutate(clicks_per_spend = Clicks / AdSpend,
-         impr_per_spend   = Impressions / AdSpend)
-  ggplot(aes(clicks_per_spend, impr_per_spend)) +
-  geom_point()
+# FacebookAds_quant %>% 
+#   spread(stat, value) %>%
+#   mutate(clicks_per_spend = Clicks / AdSpend,
+#          impr_per_spend   = Impressions / AdSpend)
+#   ggplot(aes(clicks_per_spend, impr_per_spend)) +
+#   geom_point()
 ```
